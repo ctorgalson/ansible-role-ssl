@@ -9,6 +9,11 @@ directories and files.
 
 - Add self-signed SSL generation.
 
+## Notes
+
+- This role _only_ manages files and directories. It does not configure webservers or include webserver handlers.
+- SSL key and related files should be encrypted with a tool like `ansible-vault` if they're stored in your repository.
+
 ## Role Variables
 
 | Variable name     | Default value | Description |
