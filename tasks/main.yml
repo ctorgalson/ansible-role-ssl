@@ -1,2 +1,24 @@
 ---
 # tasks file for ansible-role-ssl
+
+- name: Make sure specified directories exist.
+  file:
+    path: "{{ directory.path }}"
+    owner: "{{ directory.owner }}"
+    group: "{{ directory.group }}"
+    mode: "{{ directory.mode }}"
+  loop: "{{ ssl_directories }}"
+  loop_control:
+    loop_var: directory
+
+- name: Copy key and certificate files into place.
+  copy:
+    src: "{{ file.src }}"
+    dest: "{{ file.dest }}"
+    owner: "{{ file.owner }}"
+    group: "{{ file.group }}"
+    mode: "{{ file.mode }}"
+  no_log: true
+  loop: "{{ ssl_files }}"
+  loop_control:
+    loop_var: file
