@@ -3,6 +3,10 @@
 This role creates and manages an arbitrary, variable-ized set of SSL-related
 directories and files.
 
+### To-dos
+
+- Add self-signed SSL generation.
+
 ## Role Variables
 
 | Variable name     | Default value | Description |
