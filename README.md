@@ -1,5 +1,7 @@
 # Ansible Role SSL
 
+[![Build Status](https://travis-ci.com/ctorgalson/ansible-role-ssl.svg?branch=master)](https://travis-ci.com/ctorgalson/ansible-role-ssl)
+
 This role creates and manages an arbitrary, variable-ized set of SSL-related
 directories and files.
 
