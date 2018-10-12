@@ -23,6 +23,8 @@ The following playbook creates/configures:
   - `/etc/ssl/certs/www.example.com.crt`
   - `/etc/ssl/private/www.example.com.key`
 
+For more information and tests, see the repository's `molecule/` directory.
+
     - hosts: all
       vars:
         ssl_directories:
