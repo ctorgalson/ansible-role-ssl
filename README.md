@@ -29,12 +29,19 @@ Ansible modules use it).
 
 ## Example Playbook
 
-The following playbook creates/configures:
+The following playbook creates/configures/uploads:
 
-  - `/etc/ssl/certs`
-  - `/etc/ssl/private`
-  - `/etc/ssl/certs/www.example.com.crt`
-  - `/etc/ssl/private/www.example.com.key`
+  - Pre-existing SSL files and directories:
+    - `/etc/ssl/certs`
+    - `/etc/ssl/private`
+    - `/etc/ssl/certs/www.example.com.crt`
+    - `/etc/ssl/private/www.example.com.key`
+  - Self-signed SSL cert, key, csr, and directories:
+    - `/etc/ssl/self/certs`
+    - `/etc/ssl/self/private`
+    - `/etc/ssl/self/certs/www.example.com-key.pem`
+    - `/etc/ssl/self/certs/www.example.com-crt.pem`
+    - `/etc/ssl/self/private/www.example.com.csr`
 
 For more information and tests, see the repository's `molecule/` directory.
 
