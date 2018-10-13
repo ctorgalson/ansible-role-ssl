@@ -2,8 +2,7 @@
 
 [![Build Status](https://travis-ci.com/ctorgalson/ansible-role-ssl.svg?branch=master)](https://travis-ci.com/ctorgalson/ansible-role-ssl)
 
-This role creates and manages an arbitrary, variable-ized set of SSL-related
-directories and files.
+This role creates and manages an arbitrary, variable-ized set of SSL-related directories and files, and/or creates a set of one or more self-signed SSL certificates on the remote machine.
 
 ### To-dos
 
