@@ -11,9 +11,7 @@ This role creates and manages an arbitrary, variable-ized set of SSL-related dir
 
 ## Dependencies
 
-This role requires the Python package `pyOpenSSL` (because the
-`openssl_privatekey`, `openssl_csr`, and `openssl_certificate`
-Ansible modules use it).
+This role requires the Python package `pyOpenSSL` (because the `openssl_privatekey`, `openssl_csr`, and `openssl_certificate` Ansible modules use it).
 
 ## Role Variables
 
