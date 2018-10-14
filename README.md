@@ -4,10 +4,6 @@
 
 This role creates and manages an arbitrary, variable-ized set of SSL-related directories and files, and/or creates a set of one or more self-signed SSL certificates on the remote machine.
 
-### To-dos
-
-- Add self-signed SSL generation.
-
 ## Notes
 
 - This role _only_ manages files and directories. It does not configure webservers or include webserver handlers.
