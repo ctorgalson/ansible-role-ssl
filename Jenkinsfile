@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Archive') {
       steps {
-        archiveArtifacts '*'
+        archiveArtifacts(artifacts: '$WORKSPACE/*', defaultExcludes: true)
       }
     }
   }
