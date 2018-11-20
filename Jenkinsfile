@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('error') {
       steps {
-        sh 'molecule test'
+        sh 'ls -hal $WORKSPACE'
       }
     }
   }
