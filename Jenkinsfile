@@ -11,5 +11,10 @@ pipeline {
         sh 'ls -hal "$WORKSPACE" && cat "$WORKSPACE"/Jenkinsfile'
       }
     }
+    stage('Archive') {
+      steps {
+        archiveArtifacts '*'
+      }
+    }
   }
 }
