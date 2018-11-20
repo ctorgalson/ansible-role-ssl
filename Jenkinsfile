@@ -6,9 +6,9 @@ pipeline {
 
   }
   stages {
-    stage('error') {
+    stage('Script') {
       steps {
-        sh 'ls -hal $WORKSPACE'
+        sh 'ls -hal "$WORKSPACE" && cat "$WORKSPACE"/JenkinsFile'
       }
     }
   }
