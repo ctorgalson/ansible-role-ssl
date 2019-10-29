@@ -18,7 +18,7 @@ This role requires the Python package `pyOpenSSL` (because the `openssl_privatek
 | Variable name     | Default value | Description |
 |-------------------|---------------|-------------|
 | `ssl_directories` | `[]`          | A list of remote directories to create or configure. Supports the `path`, `owner`, `group`, and `mode` parameters from the Ansible File module. |
-| `ssl_files`       | `[]`          | A list of SSL keys and certificates to copy to the remote server. Supports the `src`, `dest`, `owner`, `group`, and `mode` parameters from the Ansible Copy module. |
+| `ssl_files`       | `[]`          | A list of SSL keys and certificates to copy to the remote server. Supports the `src`, `dest`, `owner`, `force`, `group`, and `mode` parameters from the Ansible Copy module. |
 | `ssl_self_files`       | `[]`          | A list of paths for SSL key, csr, and certificate, plus the common name. Available properties are `key_path`, `crt_path`, `csr_path`, and `csr_common_name`. |
 
 ## Example Playbook
