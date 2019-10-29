@@ -19,6 +19,7 @@
     owner: "{{ file.owner | default(omit) }}"
     group: "{{ file.group | default(omit) }}"
     mode: "{{ file.mode | default(omit) }}"
+    force: "{{ file.force | default(false) }}"
   no_log: true
   loop: "{{ ssl_files }}"
   loop_control:
