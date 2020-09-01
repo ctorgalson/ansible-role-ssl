@@ -16,11 +16,13 @@
         group: root
         mode: "u=rwx,go=rx"
     ssl_files:
-      - src: "{{ playbook_dir }}/certs/www.example.com.crt"
+      # Copy with "content" property.
+      - content: "{{ lookup('file', playbook_dir + '/certs/www.example.com.crt') }}"
         dest: "/etc/ssl/certs/www.example.com.crt"
         owner: root
         group: root
         mode: "u=rw,go=r"
+      # Copy with "src" property.
       - src: "{{ playbook_dir }}/certs/www.example.com.key"
         dest: "/etc/ssl/certs/www.example.com.key"
         owner: root
