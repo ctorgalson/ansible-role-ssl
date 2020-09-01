@@ -56,7 +56,7 @@ For more information and tests, see the repository's `molecule/` directory.
             owner: root
             group: root
             mode: "u=rw,go=r"
-          - src: "{{ playbook_dir }}/certs/www.example.com.key"
+          - content: "{{ lookup('file', playbook_dir + '/certs/www.example.com.key') }}"
             dest: "/etc/ssl/private/www.example.com.key"
             owner: root
             group: root
