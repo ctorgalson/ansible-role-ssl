@@ -1,6 +1,6 @@
 # Ansible Role SSL
 
-[![Build Status](https://travis-ci.com/ctorgalson/ansible-role-ssl.svg?branch=master)](https://travis-ci.com/ctorgalson/ansible-role-ssl)
+![](https://github.com/ctorgalson/ansible-role-ssl/workflows/Molecule%20Test/badge.svg)
 
 This role creates and manages an arbitrary, variable-ized set of SSL-related directories and files, and/or creates a set of one or more self-signed SSL certificates on the remote machine.
 
@@ -18,7 +18,7 @@ This role requires the Python package `pyOpenSSL` (because the `openssl_privatek
 | Variable name     | Default value | Description |
 |-------------------|---------------|-------------|
 | `ssl_directories` | `[]`          | A list of remote directories to create or configure. Supports the `path`, `owner`, `group`, and `mode` parameters from the Ansible File module. |
-| `ssl_files`       | `[]`          | A list of SSL keys and certificates to copy to the remote server. Supports the `src`, `dest`, `owner`, `force`, `group`, and `mode` parameters from the Ansible Copy module. |
+| `ssl_files`       | `[]`          | A list of SSL keys and certificates to copy to the remote server. Supports the `content`, `src`, `dest`, `owner`, `force`, `group`, and `mode` parameters from the Ansible Copy module. |
 | `ssl_self_files`       | `[]`          | A list of paths for SSL key, csr, and certificate, plus the common name. Available properties are `key_path`, `crt_path`, `csr_path`, and `csr_common_name`. |
 
 ## Example Playbook
@@ -56,7 +56,7 @@ For more information and tests, see the repository's `molecule/` directory.
             owner: root
             group: root
             mode: "u=rw,go=r"
-          - src: "{{ playbook_dir }}/certs/www.example.com.key"
+          - content: "{{ lookup('file', playbook_dir + '/certs/www.example.com.key') }}"
             dest: "/etc/ssl/private/www.example.com.key"
             owner: root
             group: root

@@ -14,7 +14,8 @@
 
 - name: Copy key and certificate files into place.
   copy:
-    src: "{{ file.src }}"
+    content: "{{ file.content | default(omit) }}"
+    src: "{{ file.src | default(omit) }}"
     dest: "{{ file.dest }}"
     owner: "{{ file.owner | default(omit) }}"
     group: "{{ file.group | default(omit) }}"
